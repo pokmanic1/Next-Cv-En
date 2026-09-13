@@ -169,8 +169,8 @@ const Hero = () => {
                                 <h1 className='h1Contact text-center text-white text-[20px] sm:text-[24px] md:text-[28px] font-semibold leading-tight mb-2'>
                                     Contact
                                 </h1>
-                                <a href='mailto:cirjeu.dumitru@elev.cihcahul.md' className='aEmail block text-center text-white text-[13px] sm:text-[15px] md:text-[18px] hover:underline leading-tight break-all'>
-                                    Email: cirjeu.dumitru@elev.cihcahul.md
+                                <a href='mailto:cirjeudumitru1@gmail.com' className='aEmail block text-center text-white text-[13px] sm:text-[15px] md:text-[18px] hover:underline leading-tight break-all'>
+                                    Email: cirjeudumitru1@gmail.com
                                 </a>
                                 <a href='tel:+37367100431' className='aTel block text-center text-white text-[13px] sm:text-[15px] md:text-[18px] hover:underline leading-tight'>
                                     Phone: +37367100431
