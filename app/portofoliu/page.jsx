@@ -254,9 +254,9 @@ const Portofoliu = () => {
 
 
 
-                    <div className='card1 w-full h-full col-center rounded-xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-shadow duration-300 ring-1 ring-black/5'>
+                    <div className='card1 project-card w-full h-full col-center rounded-xl overflow-hidden bg-white shadow-md ring-1 ring-black/5'>
                         <div className='w-full h-full flex flex-col text-center p-5 sm:p-6 gap-4 sm:gap-6'>
-                            <h1 className='titlu text-2xl sm:text-3xl font-semibold ' >SafeNet Junior</h1>
+                            <h1 className='titlu text-2xl sm:text-3xl font-bold text-blue-700 heading-accent ' >SafeNet Junior</h1>
                             <div>
                                 <p className='pDEspreMine block text-center text-black text-[15px] sm:text-[15px] md:text-[16px] mb-3'>
                                     <span className='font-semibold text-blue-800'>SafeNet Junior</span> is an educational platform created specially for students in grades 1–4, offering an interactive and engaging learning experience.
@@ -268,32 +268,30 @@ const Portofoliu = () => {
                                     <li>&bull;  <span className='font-semibold text-blue-600'>Dark Mode</span> for a modern and comfortable visual experience.</li>
                                     <li>&bull;  <span className='font-semibold text-blue-600'>Authentication for students and teachers</span>, with data stored in Firebase.</li>
                                 </ul></div>
-                            <div className="relative w-full h-[180px] sm:h-[200px] md:h-[220px] max-w-[550px] mx-auto mt-auto border-2 border-gray-800 rounded-xl overflow-hidden shadow-xl">
+                            <div className="relative w-full h-[180px] sm:h-[200px] md:h-[220px] max-w-[550px] mx-auto mt-auto border border-gray-200 rounded-xl overflow-hidden shadow-xl ring-1 ring-black/5">
                                 <img
                                     src={`${arrSafeNetJunior[currentIndexSafeNetJunior].img}`} alt=""
-                                    className="w-full h-full max-w-[550px]   rounded-xl shadow-sm"
+                                    className="w-full h-full max-w-[550px] object-cover rounded-xl"
                                 />
 
-                                <button
-                                    onClick={() =>
+                                <button aria-label="Previous image" className="carousel-btn left-3" onClick={() =>
                                         setCurrentIndexSafeNetJunior(prev =>
                                             prev === 0 ? arrSafeNetJunior.length - 1 : prev - 1
                                         )
                                     }>
                                     <img
                                         src="/left-arrow.png" alt=""
-                                        className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 cursor-pointer"
+                                        className="w-5 h-5"
                                     />
                                 </button>
-                                <button
-                                    onClick={() =>
+                                <button aria-label="Next image" className="carousel-btn right-3" onClick={() =>
                                         setCurrentIndexSafeNetJunior(prev =>
                                             prev === arrSafeNetJunior.length - 1 ? 0 : prev + 1
                                         )
                                     }>
                                     <img
                                         src="/right-arrow.png" alt=""
-                                        className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 cursor-pointer"
+                                        className="w-5 h-5"
                                     />
                                 </button>
                             </div>
@@ -306,9 +304,9 @@ const Portofoliu = () => {
                     {/* ------------------------------------------------------------------------------------------------------------------------------------------- */}
 
 
-                    <div className='card2 w-full h-full col-center rounded-xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-shadow duration-300 ring-1 ring-black/5'>
+                    <div className='card2 project-card w-full h-full col-center rounded-xl overflow-hidden bg-white shadow-md ring-1 ring-black/5'>
                         <div className='w-full h-full flex flex-col p-5 sm:p-6 text-center gap-4 sm:gap-6'>
-                            <h1 className='titlu text-2xl sm:text-3xl font-semibold ' >Velvet Pour</h1>
+                            <h1 className='titlu text-2xl sm:text-3xl font-bold text-blue-700 heading-accent ' >Velvet Pour</h1>
                             <div>
                                 <p className='pDEspreMine block text-center text-black text-[15px] sm:text-[15px] md:text-[16px]  mb-3'>
                                     <span className='font-semibold text-blue-800'>Velvet Pour</span> is a website created for a bar, giving users clear information about the services and the atmosphere of the venue.
@@ -332,10 +330,10 @@ const Portofoliu = () => {
 
 
 
-                    <div className='card3 w-full h-full col-center rounded-xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-shadow duration-300 ring-1 ring-black/5'>
+                    <div className='card3 project-card w-full h-full col-center rounded-xl overflow-hidden bg-white shadow-md ring-1 ring-black/5'>
                         <div className='w-full h-full flex flex-col p-5 sm:p-6 gap-4 sm:gap-6'>
 
-                            <h1 className='titlu text-2xl sm:text-3xl font-semibold  text-center' >Pet Care</h1>
+                            <h1 className='titlu text-2xl sm:text-3xl font-bold text-blue-700 heading-accent  text-center' >Pet Care</h1>
                             <div>
                                 <p className='pDEspreMine block text-center text-black text-[15px] sm:text-[15px] md:text-[16px] mb-3'>
                                     <span className='font-semibold text-blue-800'>Pet Care</span> is a website created for a veterinary clinic, giving users quick access to useful information and services.
@@ -348,35 +346,33 @@ const Portofoliu = () => {
                                     <li>&bull;  <span className='font-semibold text-blue-600'>User authentication</span>, with data stored in PostgreSQL.</li>
                                 </ul>
                             </div>
-                            <div className="relative max-w-[550px] mx-auto w-full h-[180px] sm:h-[200px] md:h-[220px] mt-auto border-2 border-gray-800 rounded-xl overflow-hidden shadow-xl">
+                            <div className="relative max-w-[550px] mx-auto w-full h-[180px] sm:h-[200px] md:h-[220px] mt-auto border border-gray-200 rounded-xl overflow-hidden shadow-xl ring-1 ring-black/5">
                                 <img
                                     src={arrPetCare[currentIndexPetCare].img}
-                                    className="w-full h-full max-w-[550px] rounded-xl shadow-sm"
+                                    className="w-full h-full max-w-[550px] object-cover rounded-xl"
                                     alt=""
                                 />
 
-                                <button
-                                    onClick={() =>
+                                <button aria-label="Previous image" className="carousel-btn left-3" onClick={() =>
                                         setCurrentIndexPetCare(
                                             prev => (prev - 1 + arrPetCare.length) % arrPetCare.length
                                         )
                                     }>
                                     <img
                                         src="/leftArrowWhite.png"
-                                        className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 cursor-pointer"
+                                        className="w-5 h-5"
                                         alt=""
                                     />
                                 </button>
 
-                                <button
-                                    onClick={() =>
+                                <button aria-label="Next image" className="carousel-btn right-3" onClick={() =>
                                         setCurrentIndexPetCare(
                                             prev => (prev + 1) % arrPetCare.length
                                         )
                                     }>
                                     <img
                                         src="/rightArrowWhite.png"
-                                        className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 cursor-pointer"
+                                        className="w-5 h-5"
                                         alt=""
                                     />
                                 </button>
@@ -403,13 +399,13 @@ const Portofoliu = () => {
                     <div className='col-center w-full h-full  '>
 
 
-                        <h1 className='text-4xl sm:text-3xl font-semibold'>4 Express.js Projects</h1>
+                        <h1 className='text-3xl sm:text-4xl font-bold text-blue-700 heading-accent my-4'>4 Express.js Projects</h1>
                         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-2 rounded-2xl shadow-2xl p-1 '>
 
 
-                            <div className='card1 w-full h-full col-center rounded-xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-shadow duration-300 ring-1 ring-black/5'>
+                            <div className='card1 project-card w-full h-full col-center rounded-xl overflow-hidden bg-white shadow-md ring-1 ring-black/5'>
                                 <div className='w-full h-full flex flex-col text-center p-5 sm:p-3 gap-4 sm:gap-6'>
-                                    <h1 className='titlu text-2xl sm:text-3xl font-semibold ' >Project 1</h1>
+                                    <h1 className='titlu text-2xl sm:text-3xl font-bold text-blue-700 heading-accent ' >Project 1</h1>
                                     <div>
                                         <p className='pDEspreMine block text-center text-black text-[15px] sm:text-[15px] md:text-[16px] mb-3'>
                                             <span className='font-semibold text-blue-800'>The first project</span> dedicated to learning Express, includes user authentication and submitting reviews
@@ -422,10 +418,10 @@ const Portofoliu = () => {
                                             <li>&bull;  <span className='font-semibold text-blue-600'>JWT</span> for the token</li>
                                         </ul>
                                     </div>
-                                    <div className="relative w-full h-[180px] sm:h-[200px] md:h-[220px] max-w-[550px] mx-auto mt-auto border-2 border-gray-800 rounded-xl overflow-hidden shadow-xl">
+                                    <div className="relative w-full h-[180px] sm:h-[200px] md:h-[220px] max-w-[550px] mx-auto mt-auto border border-gray-200 rounded-xl overflow-hidden shadow-xl ring-1 ring-black/5">
                                         <img
                                             src='/image 20.png' alt=""
-                                            className="w-full h-full max-w-[550px]   rounded-xl shadow-sm"
+                                            className="w-full h-full max-w-[550px] object-cover rounded-xl"
                                         />
                                     </div>
                                 </div>
@@ -436,9 +432,9 @@ const Portofoliu = () => {
                             {/* ------------------------------------------------------------------------------------------------------------------------------------------- */}
                             {/* ------------------------------------------------------------------------------------------------------------------------------------------- */}
 
-                            <div className='card2 w-full h-full col-center rounded-xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-shadow duration-300 ring-1 ring-black/5'>
+                            <div className='card2 project-card w-full h-full col-center rounded-xl overflow-hidden bg-white shadow-md ring-1 ring-black/5'>
                                 <div className='w-full h-full flex flex-col text-center p-5 sm:p-3 gap-2 sm:gap-2'>
-                                    <h1 className='titlu text-2xl sm:text-3xl font-semibold ' >Project 2</h1>
+                                    <h1 className='titlu text-2xl sm:text-3xl font-bold text-blue-700 heading-accent ' >Project 2</h1>
                                     <div>
                                         <p className='pDEspreMine block text-center text-black text-[15px] sm:text-[15px] md:text-[16px] mb-3'>
                                             <span className='font-semibold text-blue-800'>The 2nd project</span> was built to deepen my Express.js skills and includes user authentication and managing a movie platform, including adding, deleting, creating, and tracking the status of the user's movies
@@ -451,10 +447,10 @@ const Portofoliu = () => {
                                             <li>&bull;  <span className='font-semibold text-blue-600'>JWT</span> for the token</li>
                                         </ul>
                                     </div>
-                                    <div className="relative w-full h-[180px] sm:h-[200px] md:h-[220px] max-w-[550px] mx-auto mt-auto border-2 border-gray-800 rounded-xl overflow-hidden shadow-xl">
+                                    <div className="relative w-full h-[180px] sm:h-[200px] md:h-[220px] max-w-[550px] mx-auto mt-auto border border-gray-200 rounded-xl overflow-hidden shadow-xl ring-1 ring-black/5">
                                         <img
                                             src='/image 26.png' alt=""
-                                            className="w-full h-full max-w-[550px]   rounded-xl shadow-sm"
+                                            className="w-full h-full max-w-[550px] object-cover rounded-xl"
                                         />
                                     </div>
                                 </div>
@@ -467,10 +463,10 @@ const Portofoliu = () => {
 
 
 
-                            <div className='card3 w-full h-full col-center rounded-xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-shadow duration-300 ring-1 ring-black/5'>
+                            <div className='card3 project-card w-full h-full col-center rounded-xl overflow-hidden bg-white shadow-md ring-1 ring-black/5'>
                                 <div className='w-full h-full flex flex-col p-5 sm:p-3 gap-4 sm:gap-6'>
 
-                                    <h1 className='titlu text-2xl sm:text-3xl font-semibold  text-center' >Project 3</h1>
+                                    <h1 className='titlu text-2xl sm:text-3xl font-bold text-blue-700 heading-accent  text-center' >Project 3</h1>
                                     <div>
                                         <p className='pDEspreMine block text-center text-black text-[15px] sm:text-[15px] md:text-[16px] mb-3'>
                                             <span className='font-semibold text-blue-800'>The 3rd project</span> dedicated to learning Express, includes user authentication and contact pages
@@ -483,10 +479,10 @@ const Portofoliu = () => {
                                             <li>&bull;  <span className='font-semibold text-blue-600'>JWT</span> for the token</li>
                                         </ul>
                                     </div>
-                                    <div className="relative max-w-[550px] mx-auto w-full h-[180px] sm:h-[200px] md:h-[220px] mt-auto border-2 border-gray-800 rounded-xl overflow-hidden shadow-xl">
+                                    <div className="relative max-w-[550px] mx-auto w-full h-[180px] sm:h-[200px] md:h-[220px] mt-auto border border-gray-200 rounded-xl overflow-hidden shadow-xl ring-1 ring-black/5">
                                         <img
                                             src='/image 22.png'
-                                            className="w-full h-full max-w-[550px] rounded-xl shadow-sm"
+                                            className="w-full h-full max-w-[550px] object-cover rounded-xl"
                                             alt=""
                                         />
                                     </div>
@@ -499,10 +495,10 @@ const Portofoliu = () => {
 
 
 
-                            <div className='card3 w-full h-full col-center rounded-xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-shadow duration-300 ring-1 ring-black/5'>
+                            <div className='card3 project-card w-full h-full col-center rounded-xl overflow-hidden bg-white shadow-md ring-1 ring-black/5'>
                                 <div className='w-full h-full flex flex-col p-5 sm:p-3 gap-4 sm:gap-6'>
 
-                                    <h1 className='titlu text-2xl sm:text-3xl font-semibold  text-center' >Project 4</h1>
+                                    <h1 className='titlu text-2xl sm:text-3xl font-bold text-blue-700 heading-accent  text-center' >Project 4</h1>
                                     <div>
                                         <p className='pDEspreMine block text-center text-black text-[15px] sm:text-[15px] md:text-[16px] mb-3'>
                                             <span className='font-semibold text-blue-800'>The 4th project</span> dedicated to learning Express, includes user authentication and a booking system
@@ -515,10 +511,10 @@ const Portofoliu = () => {
                                             <li>&bull;  <span className='font-semibold text-blue-600'>JWT</span> for the token</li>
                                         </ul>
                                     </div>
-                                    <div className="relative max-w-[550px] mx-auto w-full h-[180px] sm:h-[200px] md:h-[220px] mt-auto border-2 border-gray-800 rounded-xl overflow-hidden shadow-xl">
+                                    <div className="relative max-w-[550px] mx-auto w-full h-[180px] sm:h-[200px] md:h-[220px] mt-auto border border-gray-200 rounded-xl overflow-hidden shadow-xl ring-1 ring-black/5">
                                         <img
                                             src='/image 24.png'
-                                            className="w-full h-full max-w-[550px] rounded-xl shadow-sm"
+                                            className="w-full h-full max-w-[550px] object-cover rounded-xl"
                                             alt=""
                                         />
 
@@ -548,7 +544,7 @@ const Portofoliu = () => {
                     <div className='col-center w-full h-full  '>
 
 
-                        <h1 className='text-4xl sm:text-3xl font-semibold'>2 Next.js Projects</h1>
+                        <h1 className='text-3xl sm:text-4xl font-bold text-blue-700 heading-accent my-4'>2 Next.js Projects</h1>
                         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-2 rounded-2xl shadow-2xl p-1 '>
 
 
@@ -559,10 +555,10 @@ const Portofoliu = () => {
 
 
 
-                            <div className='card3 w-full h-full col-center rounded-xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-shadow duration-300 ring-1 ring-black/5'>
+                            <div className='card3 project-card w-full h-full col-center rounded-xl overflow-hidden bg-white shadow-md ring-1 ring-black/5'>
                                 <div className='w-full h-full flex flex-col p-5 sm:p-3 gap-4 sm:gap-6'>
 
-                                    <h1 className='titlu text-2xl sm:text-3xl font-semibold  text-center' >Project 1</h1>
+                                    <h1 className='titlu text-2xl sm:text-3xl font-bold text-blue-700 heading-accent  text-center' >Project 1</h1>
                                     <div>
                                         <p className='pDEspreMine block text-center text-black text-[15px] sm:text-[15px] md:text-[16px] mb-3'>
                                             <span className='font-semibold text-blue-800'>The first one</span>, dedicated to learning Next.js, focused on server-side rendering and efficient route management:
@@ -576,10 +572,10 @@ const Portofoliu = () => {
                                         </ul>
 
                                     </div>
-                                    <div className="relative max-w-[550px] mx-auto w-full h-[180px] sm:h-[200px] md:h-[220px] mt-auto border-2 border-gray-800 rounded-xl overflow-hidden shadow-xl">
+                                    <div className="relative max-w-[550px] mx-auto w-full h-[180px] sm:h-[200px] md:h-[220px] mt-auto border border-gray-200 rounded-xl overflow-hidden shadow-xl ring-1 ring-black/5">
                                         <img
                                             src='/image 27 (1).png'
-                                            className="w-full h-full max-w-[550px] rounded-xl shadow-sm"
+                                            className="w-full h-full max-w-[550px] object-cover rounded-xl"
                                             alt=""
                                         />
                                     </div>
@@ -592,10 +588,10 @@ const Portofoliu = () => {
 
 
 
-                            <div className='card3 w-full h-full col-center rounded-xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-shadow duration-300 ring-1 ring-black/5'>
+                            <div className='card3 project-card w-full h-full col-center rounded-xl overflow-hidden bg-white shadow-md ring-1 ring-black/5'>
                                 <div className='w-full h-full flex flex-col p-5 sm:p-3 gap-4 sm:gap-6'>
 
-                                    <h1 className='titlu text-2xl sm:text-3xl font-semibold  text-center ' >Project 2</h1>
+                                    <h1 className='titlu text-2xl sm:text-3xl font-bold text-blue-700 heading-accent  text-center ' >Project 2</h1>
                                     <div>
                                         <p className='pDEspreMine block text-center text-black text-[15px] sm:text-[15px] md:text-[16px] mb-3'>
                                             <span className='font-semibold text-blue-800'>The second project</span> represents an advanced step in mastering the Next.js ecosystem:
@@ -609,10 +605,10 @@ const Portofoliu = () => {
 
 
                                     </div>
-                                    <div className="relative max-w-[550px] mx-auto w-full h-[180px] sm:h-[200px] md:h-[220px] mt-auto border-2 border-gray-800 rounded-xl overflow-hidden shadow-xl">
+                                    <div className="relative max-w-[550px] mx-auto w-full h-[180px] sm:h-[200px] md:h-[220px] mt-auto border border-gray-200 rounded-xl overflow-hidden shadow-xl ring-1 ring-black/5">
                                         <img
                                             src='/image 19 (1).png'
-                                            className="w-full h-full max-w-[550px] rounded-xl shadow-sm"
+                                            className="w-full h-full max-w-[550px] object-cover rounded-xl"
                                             alt=""
                                         />
 
@@ -644,9 +640,9 @@ const Portofoliu = () => {
                     {/* ------------------------------------------------------------------------------------------------------------------------------------------- */}
                     {/* ------------------------------------------------------------------------------------------------------------------------------------------- */}
                     {/* ------------------------------------------------------------------------------------------------------------------------------------------- */}
-                    <div className='card1 w-full h-full col-center rounded-xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-shadow duration-300 ring-1 ring-black/5'>
+                    <div className='card1 project-card w-full h-full col-center rounded-xl overflow-hidden bg-white shadow-md ring-1 ring-black/5'>
                         <div className='w-full h-full flex flex-col text-center p-5 sm:p-6 gap-4 sm:gap-6'>
-                            <h1 className='titlu text-2xl sm:text-3xl font-semibold ' >1 Nest.js Project</h1>
+                            <h1 className='titlu text-2xl sm:text-3xl font-bold text-blue-700 heading-accent ' >1 Nest.js Project</h1>
                             <div>
                                 <p className='pDEspreMine block text-center text-black text-[15px] sm:text-[15px] md:text-[16px] mb-3'>
                                     <span className='font-semibold text-blue-800'>Karta</span> is a platform for creating notes, built with the goal of practicing and mastering authentication in NestJS.
@@ -664,28 +660,26 @@ const Portofoliu = () => {
                                 <img
                                     src={`${arrKarta[currentIndexKarta].img}`}
                                     alt=""
-                                    className="block w-full h-full max-w-[550px] rounded-xl shadow-sm object-cover border-2 border-gray-800 shadow-2xl "
+                                    className="block w-full h-full max-w-[550px] object-cover rounded-xl object-cover border border-gray-200 shadow-2xl "
                                 />
-                                <button
-                                    onClick={() =>
+                                <button aria-label="Previous image" className="carousel-btn left-3" onClick={() =>
                                         setCurrentIndexKarta(prev =>
                                             prev === 0 ? arrKarta.length - 1 : prev - 1
                                         )
                                     }>
                                     <img
                                         src="/leftArrowWhite.png" alt=""
-                                        className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 cursor-pointer border"
+                                        className="w-5 h-5"
                                     />
                                 </button>
-                                <button
-                                    onClick={() =>
+                                <button aria-label="Next image" className="carousel-btn right-3" onClick={() =>
                                         setCurrentIndexKarta(prev =>
                                             prev === arrKarta.length - 1 ? 0 : prev + 1
                                         )
                                     }>
                                     <img
                                         src="/rightArrowWhite.png" alt=""
-                                        className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 cursor-pointer"
+                                        className="w-5 h-5"
                                     />
                                 </button>
                             </div>
@@ -717,9 +711,9 @@ const Portofoliu = () => {
                     {/* ------------------------------------------------------------------------------------------------------------------------------------------- */}
                     {/* ------------------------------------------------------------------------------------------------------------------------------------------- */}
                     {/* ------------------------------------------------------------------------------------------------------------------------------------------- */}
-                    <div className='card1 w-full h-full col-center rounded-xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-shadow duration-300 ring-1 ring-black/5'>
+                    <div className='card1 project-card w-full h-full col-center rounded-xl overflow-hidden bg-white shadow-md ring-1 ring-black/5'>
                         <div className='w-full h-full flex flex-col text-center p-5 sm:p-6 gap-4 sm:gap-6'>
-                            <h1 className='titlu text-2xl sm:text-3xl font-semibold ' >1 Next.js Project</h1>
+                            <h1 className='titlu text-2xl sm:text-3xl font-bold text-blue-700 heading-accent ' >1 Next.js Project</h1>
                             <div>
                                 <p className='pDEspreMine block text-center text-black text-[15px] sm:text-[15px] md:text-[16px] mb-3'>
                                     <span className='font-semibold text-blue-800'>Loughi</span> is a modern platform for a restaurant, equipped with a complete booking system and an interactive menu:
@@ -737,28 +731,26 @@ const Portofoliu = () => {
                                 <img
                                     src={`${arrRestaurant[currentIndexRestaurant].img}`}
                                     alt=""
-                                    className="block w-full h-full max-w-[550px]  object-cover border-2 border-gray-800 rounded-xl  shadow-xl"
+                                    className="block w-full h-full max-w-[550px]  object-cover border border-gray-200 rounded-xl shadow-xl"
                                 />
-                                <button
-                                    onClick={() =>
+                                <button aria-label="Previous image" className="carousel-btn left-3" onClick={() =>
                                         setCurrentIndexRestaurant(prev =>
                                             prev === 0 ? arrRestaurant.length - 1 : prev - 1
                                         )
                                     }>
                                     <img
                                         src="/leftArrowWhite.png" alt=""
-                                        className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 cursor-pointer border"
+                                        className="w-5 h-5"
                                     />
                                 </button>
-                                <button
-                                    onClick={() =>
+                                <button aria-label="Next image" className="carousel-btn right-3" onClick={() =>
                                         setCurrentIndexRestaurant(prev =>
                                             prev === arrRestaurant.length - 1 ? 0 : prev + 1
                                         )
                                     }>
                                     <img
                                         src="/rightArrowWhite.png" alt=""
-                                        className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 cursor-pointer"
+                                        className="w-5 h-5"
                                     />
                                 </button>
                             </div>
@@ -793,23 +785,25 @@ const Portofoliu = () => {
 
 
 
-                <div
+                <button
+                    aria-label="Previous section"
                     onClick={() => setCurentSection(-1)}
-                    className='absolute bottom-1/2  left-5 sm:left-10 md:left-17 lg:left-24 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center bg-transparent '>
+                    className='absolute bottom-1/2 left-0.5 sm:left-2 lg:left-2 -translate-y-1/2 z-20 flex justify-center items-center rounded-full bg-white/90 p-1.5 shadow-lg hover:bg-white'>
                     <img
                         src="/left-arrow.png" alt=""
-                        className="scale-95 hover:scale-110 transition ease-in w-10 h-10 cursor-pointer"
+                        className="scale-95 hover:scale-110 transition ease-in w-7 h-7 cursor-pointer"
                     />
-                </div>
+                </button>
 
-                <div
+                <button
+                    aria-label="Next section"
                     onClick={() => setCurentSection(1)}
-                    className='absolute bottom-1/2  right-5 sm:right-10 md:right-17 lg:right-24 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center bg-transparent '>
+                    className='absolute bottom-1/2 right-0.5 sm:right-2 lg:right-2 -translate-y-1/2 z-20 flex justify-center items-center rounded-full bg-white/90 p-1.5 shadow-lg hover:bg-white'>
                     <img
                         src="/right-arrow.png" alt=""
-                        className="scale-95 hover:scale-110 transition ease-in w-10 h-10 cursor-pointer"
+                        className="scale-95 hover:scale-110 transition ease-in w-7 h-7 cursor-pointer"
                     />
-                </div>
+                </button>
 
                 <motion.div
                     whileHover={{
@@ -818,7 +812,7 @@ const Portofoliu = () => {
                         x: 0,
                         rotate: 0,
                         opacity: 1,
-                        backgroundColor: "#f3f4f6"
+                        backgroundColor: "#eff6ff"
                     }}
                     whileTap={{
                         scale: 0.9,
@@ -833,8 +827,8 @@ const Portofoliu = () => {
                         mass: 0.8,
                         duration: 0.3,
                     }}
-                    className='absolute bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-[140px] sm:min-w-[10%] py-2 px-6 sm:px-9 flex justify-center items-center border-2 bg-gray-200 border-black rounded-2xl shadow-2xl'>
-                    <Link href="/" className='text-[14px] sm:text-[16px]'>Main Section</Link>
+                    className='absolute bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-[140px] sm:min-w-[10%] py-2 px-6 sm:px-9 flex justify-center items-center border-2 bg-white border-blue-600 text-blue-700 font-semibold rounded-2xl shadow-2xl'>
+                    <Link href="/" className='text-[14px] sm:text-[16px]'>&larr; Main Section</Link>
                 </motion.div>
 
             </section>

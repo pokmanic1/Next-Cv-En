@@ -22,6 +22,11 @@ const arr = [
     { id: 8, name: 'Express', img: '/Expres.png' },
     { id: 9, name: 'Next', img: '/Next.png' },
     { id: 10, name: 'Nest', img: '/Nest.png' },
+    { id: 11, name: 'Prisma', img: '/Prisma.svg' },
+    { id: 12, name: 'Docker', img: '/Docker.svg' },
+    { id: 13, name: 'GitHub Actions', img: '/GithubActions.svg' },
+    { id: 14, name: 'Redis', img: '/Redis.svg' },
+    { id: 15, name: 'Nginx', img: '/Nginx.svg' },
 ]
 
 const Hero = () => {
@@ -102,11 +107,12 @@ const Hero = () => {
         }, "-=0.1")
         .from(".skillCard", {
             opacity: 0,
-            x: 50,
-            scale: 0.9,
-            stagger: 0.1,
-            duration: 0.2,
-            ease: "expo.in",
+            y: 24,
+            scale: 0.6,
+            rotate: -6,
+            stagger: 0.07,
+            duration: 0.5,
+            ease: "back.out(2)",
             clearProps: "all"
         }, "-=0.1")
         .from(".heroButton", {
@@ -136,43 +142,47 @@ const Hero = () => {
     }, { scope: containerRef });
 
     return (
-        <section ref={containerRef} className='flex-center w-full min-h-dvh bg-[linear-gradient(135deg,#3795DB_0%,#004CB2_50%,#001C66_100%)] py-8 px-4 sm:py-10 sm:px-6 md:py-12 md:px-10 lg:py-[10px] lg:px-[90px]'>
-            <div className='col-center w-full h-full '>
-                <div className='w-full h-auto lg:h-[70%] grid grid-cols-1 lg:grid-cols-7 bg-white gap-y-10 lg:gap-y-0 lg:rounded-none rounded-[20px] ' >
+        <section ref={containerRef} className='relative flex-center w-full min-h-dvh bg-[linear-gradient(135deg,#3795DB_0%,#004CB2_50%,#001C66_100%)] py-8 px-4 sm:py-10 sm:px-6 md:py-12 md:px-10 lg:py-[10px] lg:px-[90px]'>
+            <div aria-hidden className='pointer-events-none absolute inset-0 overflow-hidden'>
+                <div className='absolute -top-32 -left-32 w-[420px] h-[420px] rounded-full bg-sky-300/30 blur-3xl' />
+                <div className='absolute -bottom-40 -right-24 w-[480px] h-[480px] rounded-full bg-pink-400/20 blur-3xl' />
+            </div>
+            <div className='relative col-center w-full h-full '>
+                <div className='w-full h-auto lg:h-[70%] shadow-2xl grid grid-cols-1 lg:grid-cols-7 bg-white gap-y-10 lg:gap-y-0 lg:rounded-none rounded-[20px] ' >
 
                     <div className='w-full h-full p-4 sm:p-5 md:p-[20px] lg:col-span-2 order-2 lg:order-1'>
                         <div>
                             <div>
-                                <h1 className='h1DespreMine text-center text-blue-600 text-[22px] sm:text-[26px] md:text-[30px] leading-tight mb-4'>
+                                <h1 className='h1DespreMine text-center text-blue-600 font-bold heading-accent text-[22px] sm:text-[26px] md:text-[30px] leading-tight mb-4'>
                                     About Me
                                 </h1>
-                                <p className='pDEspreMine block text-center text-gray-600 text-[14px] sm:text-[15px] md:text-[16px]'>Full-Stack Developer passionate about web development and bringing ideas to practical projects. I am looking for an opportunity within a dynamic team, where I can broaden my knowledge, learn from those around me, and actively contribute to the development of projects.</p>
+                                <p className='pDEspreMine block text-center text-gray-600 leading-relaxed text-[14px] sm:text-[15px] md:text-[16px]'>Full-Stack Developer passionate about web development and bringing ideas to practical projects. I am looking for an opportunity within a dynamic team, where I can broaden my knowledge, learn from those around me, and actively contribute to the development of projects.</p>
                             </div>
                         </div>
                         <div className='col-center gap-[15px] mt-[29px] '>
-                            <div className='educationCard border-gradient py-1 px-4 sm:px-6 text-center text-[14px] sm:text-[16px]'>Education: „I. Hasdeu” College, Cahul</div>
-                            <div className='educationCard border-gradient py-1 px-4 sm:px-6 text-center text-[14px] sm:text-[16px]'>Age: 19 years old</div>
-                            <div className='educationCard border-gradient py-1 px-4 sm:px-6 text-center text-[14px] sm:text-[16px]'>Main Goal: Learning - Growth</div>
+                            <div className='educationCard edu-card py-2 px-4 sm:px-6 text-center text-gray-700 font-medium w-full text-[14px] sm:text-[16px]'>Education: „I. Hasdeu” College, Cahul</div>
+                            <div className='educationCard edu-card py-2 px-4 sm:px-6 text-center text-gray-700 font-medium w-full text-[14px] sm:text-[16px]'>Age: 19 years old</div>
+                            <div className='educationCard edu-card py-2 px-4 sm:px-6 text-center text-gray-700 font-medium w-full text-[14px] sm:text-[16px]'>Main Goal: Learning - Growth</div>
                         </div>
                     </div>
 
                     <div className='w-full lg:col-start-3 lg:col-span-3 relative z-10 order-1 lg:order-2 min-h-[480px] sm:min-h-[520px] md:min-h-[520px] lg:min-h-0 '>
-                        <div className='sectiuneaPrincipala absolute inset-x-0 top-0 bottom-0 lg:-top-12 p-2 lg:-bottom-0 gradient-secundar rounded-3xl col-center shadow-[0px_10px_30px_10px_#4b5563] gap-[10px] px-[10px] '>
+                        <div className='sectiuneaPrincipala absolute inset-x-0 top-0 bottom-0 lg:-top-12 p-2 lg:-bottom-0 gradient-secundar rounded-3xl col-center shadow-[0px_20px_50px_-5px_rgba(0,20,85,0.55)] ring-1 ring-white/20 gap-[10px] px-[10px] '>
                             <div className='w-full h-[50%] flex items-end justify-center'>
-                                <img src="/IMG-20260220-WA0000.jpg" className='heroImg h-[85%] sm:h-[90%] w-[55%] sm:w-[45%] md:w-[40%] bg-center object-cover rounded-full' alt="" />
+                                <img src="/IMG-20260220-WA0000.jpg" className='heroImg h-[85%] sm:h-[90%] w-[55%] sm:w-[45%] md:w-[40%] bg-center object-cover rounded-full ring-4 ring-white/30 shadow-2xl' alt="Cirjeu Dumitru" />
                             </div>
                             <div className='w-full text-center h-[20%] border-b border-gray-400 '>
-                                <h1 className='h1FrontEnd w-full text-center text-white text-[22px] sm:text-[26px] md:text-[30px] font-semibold'>Full-Stack Developer</h1>
-                                <h1 className='h1Nume w-full text-center text-white text-[18px] sm:text-[21px] md:text-[24px]'>Cirjeu Dumitru</h1>
+                                <h1 className='h1FrontEnd w-full text-center text-white text-[22px] sm:text-[26px] md:text-[30px] font-bold tracking-tight'>Full-Stack Developer</h1>
+                                <h1 className='h1Nume w-full text-center text-sky-200 text-[18px] sm:text-[21px] md:text-[24px] font-medium'>Cirjeu Dumitru</h1>
                             </div>
                             <div className='w-full h-[40%] flex flex-col justify-center items-center gap-1 px-2'>
                                 <h1 className='h1Contact text-center text-white text-[20px] sm:text-[24px] md:text-[28px] font-semibold leading-tight mb-2'>
                                     Contact
                                 </h1>
-                                <a href='mailto:cirjeudumitru1@gmail.com' className='aEmail block text-center text-white text-[13px] sm:text-[15px] md:text-[18px] hover:underline leading-tight break-all'>
+                                <a href='mailto:cirjeudumitru1@gmail.com' className='aEmail block text-center text-white text-[13px] sm:text-[15px] md:text-[18px] hover:text-sky-200 hover:underline underline-offset-4 transition-colors leading-tight break-all'>
                                     Email: cirjeudumitru1@gmail.com
                                 </a>
-                                <a href='tel:+37367100431' className='aTel block text-center text-white text-[13px] sm:text-[15px] md:text-[18px] hover:underline leading-tight'>
+                                <a href='tel:+37367100431' className='aTel block text-center text-white text-[13px] sm:text-[15px] md:text-[18px] hover:text-sky-200 hover:underline underline-offset-4 transition-colors leading-tight'>
                                     Phone: +37367100431
                                 </a>
                                 <p className='pLocuinta text-center text-white text-[13px] sm:text-[15px] md:text-[18px] leading-tight'>
@@ -183,21 +193,21 @@ const Hero = () => {
                     </div>
 
                     <div className='w-full h-full lg:col-span-2 p-4 sm:p-5 md:p-[20px] order-3'>
-                        <h1 className='h1Skill text-center font-bold text-blue-600 text-[22px] sm:text-[26px] md:text-[30px] leading-tight mb-8'>
+                        <h1 className='h1Skill text-center font-bold text-blue-600 heading-accent text-[22px] sm:text-[26px] md:text-[30px] leading-tight mb-5'>
                             Skills
                         </h1>
-                        <div className='flex flex-wrap justify-center gap-3 sm:gap-4 max-w-2xl mx-auto'>
+                        <div className='flex flex-wrap justify-center gap-2 sm:gap-2.5 max-w-2xl mx-auto'>
                             {arr.map((item) => (
                                 <div
                                     key={item.id}
-                                    className='skillCard flex items-center justify-center gap-3 px-4 py-2.5 bg-white border border-slate-100 shadow-sm rounded-xl hover:shadow-md hover:border-blue-200 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer'
+                                    className='skillCard flex items-center justify-center gap-2 px-2.5 py-1.5 bg-white border border-slate-100 shadow-sm rounded-lg hover:shadow-lg hover:shadow-blue-200/60 hover:border-blue-300 transition-all duration-200 hover:-translate-y-1 cursor-default'
                                 >
                                     <img
                                         src={item.img}
-                                        className='w-5 h-5 sm:w-6 sm:h-6 object-contain shrink-0'
+                                        className='w-4 h-4 sm:w-5 sm:h-5 object-contain shrink-0 rounded-[3px]'
                                         alt={item.name}
                                     />
-                                    <span className='text-[14px] sm:text-[15px] font-medium text-slate-700 whitespace-nowrap'>
+                                    <span className='text-[12px] sm:text-[13px] font-medium text-slate-700 whitespace-nowrap'>
                                         {item.name}
                                     </span>
                                 </div>
@@ -215,7 +225,7 @@ const Hero = () => {
                             x: 0,
                             rotate: 0,
                             opacity: 1,
-                            backgroundColor: "#f3f4f6"
+                            backgroundColor: "#eff6ff"
                         }}
                         whileTap={{
                             scale: 0.9,
@@ -228,8 +238,8 @@ const Hero = () => {
                             mass: 0.8,
                             duration: 0.3,
                         }}
-                        className='heroButton min-w-[140px] sm:min-w-[10%] py-2 px-6 sm:px-9 flex justify-center items-start mt-auto border-2 bg-gray-200 border-black rounded-2xl'>
-                        <Link href="/portofoliu" className='text-[14px] sm:text-[16px]'>See more</Link>
+                        className='heroButton min-w-[140px] sm:min-w-[10%] py-2 px-6 sm:px-9 flex justify-center items-center mt-auto border-2 bg-white border-blue-600 text-blue-700 font-semibold rounded-2xl shadow-lg'>
+                        <Link href="/portofoliu" className='text-[14px] sm:text-[16px]'>See more &rarr;</Link>
                     </motion.div>
                 </div>
             </div>

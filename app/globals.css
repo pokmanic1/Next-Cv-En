@@ -1,5 +1,93 @@
 @import "tailwindcss";
 
+@theme inline {
+    --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+    background: #2563eb;
+    color: #fff;
+}
+
+:focus-visible {
+    outline: 3px solid #60a5fa;
+    outline-offset: 3px;
+    border-radius: 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@utility edu-card {
+    background: linear-gradient(90deg, #eff6ff, #ffffff);
+    border: 1px solid #dbeafe;
+    border-left: 4px solid #2563eb;
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    &:hover {
+        transform: translateX(4px);
+        box-shadow: 0 6px 16px -6px rgb(37 99 235 / 0.35);
+    }
+}
+
+@utility heading-accent {
+    position: relative;
+    padding-bottom: 0.6rem;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 48px;
+        height: 3px;
+        border-radius: 999px;
+        transform: translateX(-50%);
+        background: linear-gradient(to right, #3b82f6, #ec4899);
+    }
+}
+
+@utility project-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px -16px rgb(0 76 178 / 0.45);
+    }
+}
+
+@utility carousel-btn {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: rgb(0 0 0 / 0.45);
+    backdrop-filter: blur(4px);
+    cursor: pointer;
+    transition: background 0.2s ease, scale 0.2s ease;
+    &:hover {
+        background: rgb(0 0 0 / 0.7);
+        scale: 1.1;
+    }
+}
+
+
 
 @utility flex-center {
     @apply flex justify-center items-center;
