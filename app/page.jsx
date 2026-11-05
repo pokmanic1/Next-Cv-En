@@ -115,6 +115,14 @@ const Hero = () => {
             ease: "back.out(2)",
             clearProps: "all"
         }, "-=0.1")
+.from(".expCard", {
+            opacity: 0,
+            y: 20,
+            scale: 0.7,
+            duration: 0.5,
+            ease: "back.out(2)",
+            clearProps: "all"
+        }, "-=0.2")
         .from(".heroButton", {
             opacity: 0,
             y: 40,
@@ -212,6 +220,11 @@ const Hero = () => {
                                     </span>
                                 </div>
                             ))}
+                        </div>
+                        <div className='expCard mx-auto mt-6 w-fit col-center px-8 py-3 rounded-2xl bg-gradient-to-b from-blue-50 to-white border border-blue-100 shadow-md'>
+                            <span className='text-[11px] sm:text-[12px] uppercase tracking-widest font-semibold text-slate-500 mb-0.5'>Under</span>
+                            <span className='bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent text-5xl sm:text-6xl font-extrabold leading-none'>1</span>
+                            <span className='mt-1 text-[12px] sm:text-[13px] uppercase tracking-widest font-semibold text-slate-600'>Year of Experience</span>
                         </div>
                     </div>
 
