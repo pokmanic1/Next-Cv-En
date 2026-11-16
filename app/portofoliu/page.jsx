@@ -82,7 +82,21 @@ let arrKarta = [
         id: 3,
         img: '/image 34.png'
     },
-  
+
+]
+let arrDevOps = [
+    {
+        id: 1,
+        img: '/DevOps-1.png'
+    },
+    {
+        id: 2,
+        img: '/DevOps-2.png'
+    },
+    {
+        id: 3,
+        img: '/DevOps-3.png'
+    },
 ]
 
 const Portofoliu = () => {
@@ -94,8 +108,8 @@ const Portofoliu = () => {
 
         setCurectshowSection((prev) => {
             const next = prev + x;
-            if (next > 4) return 0;
-            if (next < 0) return 4;
+            if (next > 5) return 0;
+            if (next < 0) return 5;
             return next;
         });
 
@@ -105,6 +119,7 @@ const Portofoliu = () => {
     const [currentIndexPetCare, setCurrentIndexPetCare] = useState(0);
     const [currentIndexRestaurant, setCurrentIndexRestaurant] = useState(0);
     const [currentIndexKarta, setCurrentIndexKarta] = useState(0);
+    const [currentIndexDevOps, setCurrentIndexDevOps] = useState(0);
 
 
 
@@ -766,19 +781,67 @@ const Portofoliu = () => {
 
                 </div>
 
+                {/* ------------------------------------------------------------------------------------------------------------------------------------------- */}
+                {/* ------------------------------------------------------------------------------------------------------------------------------------------- */}
+                {/* ------------------------------------------------------------------------------------------------------------------------------------------- */}
 
+                <div className={`col-center w-full h-full bg-white  gap-4 sm:gap-5 md:gap-6 rounded-2xl shadow-2xl p-[4px] sm:p-[6px] md:p-[8px] lg:p-[10px] ${curectshowSection === 5 ? 'flex' : 'hidden'}`}>
 
+                    <div className='card1 project-card w-full h-full col-center rounded-xl overflow-hidden bg-white shadow-md ring-1 ring-black/5'>
+                        <div className='w-full h-full flex flex-col text-center p-3 sm:p-4 gap-2 sm:gap-3'>
+                            <h1 className='titlu text-xl sm:text-2xl font-bold text-blue-700 heading-accent ' >Acquisitions</h1>
+                            <div>
+                                <p className='pDEspreMine block text-center text-black text-[12px] sm:text-[13px] mb-2'>
+                                    <span className='font-semibold text-blue-800'>Acquisitions</span> is a production-style REST API for user management, built to learn backend security, testing and DevOps.
+                                </p>
 
+                                <ul className='detalii text-left mx-auto w-fit max-w-[1300px] space-y-0.5 text-[11px] sm:text-[12px] text-black/80'>
+                                    <li>&bull; <span className='font-semibold text-blue-600'>JWT authentication</span> with Bcrypt-hashed passwords, with the token stored in httpOnly, SameSite=strict cookies.</li>
+                                    <li>&bull; <span className='font-semibold text-blue-600'>Role-based access:</span> users can edit or delete only their own account, while admins manage everyone and are the only ones who can change roles.</li>
+                                    <li>&bull; <span className='font-semibold text-blue-600'>Full users CRUD</span> with request validation through Zod.</li>
+                                    <li>&bull; <span className='font-semibold text-blue-600'>Protection on every request</span> with Arcjet (Shield against attacks, bot detection and sliding-window rate limiting per role) plus Helmet for secure headers.</li>
+                                    <li>&bull; <span className='font-semibold text-blue-600'>PostgreSQL on Neon</span> through Drizzle ORM with versioned migrations, and logging with Winston and Morgan.</li>
+                                    <li>&bull; <span className='font-semibold text-blue-600'>Containerized</span> with a multi-stage Dockerfile and Docker Compose for development (with Neon Local) and production.</li>
+                                    <li>&bull; <span className='font-semibold text-blue-600'>Tested</span> with Jest and Supertest.</li>
+                                    <li>&bull; <span className='font-semibold text-blue-600'>CI/CD pipeline</span> on GitHub Actions: lint and format checks, tests with coverage, then a multi-arch (amd64/arm64) image published to Docker Hub.</li>
+                                    <li>&bull; <span className='font-semibold text-blue-600'>Next.js and Tailwind CSS frontend</span> with sign-in and sign-up screens, a user management dashboard and a live API status page.</li>
+                                </ul>
 
+                                <p className='detalii block text-center text-black/80 text-[11px] sm:text-[12px] mt-2 max-w-[900px] mx-auto'>
+                                    <span className='font-semibold text-blue-800'>Stack:</span> Node.js, Express 5, PostgreSQL (Neon), Drizzle ORM, JWT, Bcrypt, Zod, Arcjet, Helmet, Winston, Morgan, Jest, Supertest, ESLint, Prettier, Docker, Docker Compose, GitHub Actions, Next.js, React, Tailwind CSS.
+                                </p>
+                            </div>
+                            <div className="relative  mx-auto mt-auto rounded-xl  ">
+                                <img
+                                    src={`${arrDevOps[currentIndexDevOps].img}`}
+                                    alt=""
+                                    className="block w-full max-w-[650px] max-h-[40vh] object-cover object-top rounded-xl border border-gray-200 shadow-2xl "
+                                />
+                                <button aria-label="Previous image" className="carousel-btn left-3" onClick={() =>
+                                        setCurrentIndexDevOps(prev =>
+                                            prev === 0 ? arrDevOps.length - 1 : prev - 1
+                                        )
+                                    }>
+                                    <img
+                                        src="/leftArrowWhite.png" alt=""
+                                        className="w-5 h-5"
+                                    />
+                                </button>
+                                <button aria-label="Next image" className="carousel-btn right-3" onClick={() =>
+                                        setCurrentIndexDevOps(prev =>
+                                            prev === arrDevOps.length - 1 ? 0 : prev + 1
+                                        )
+                                    }>
+                                    <img
+                                        src="/rightArrowWhite.png" alt=""
+                                        className="w-5 h-5"
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
 
-
-
-
-
-
-
-
-
+                </div>
 
 
 
